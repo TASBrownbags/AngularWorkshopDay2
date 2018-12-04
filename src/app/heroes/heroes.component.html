@@ -1,0 +1,34 @@
+<div class = "container">
+  <h2>My Heroes</h2>
+
+<div class = "container">
+  <div class = "hero-value">
+    <label for= "name">Hero name: </label>
+    <input id="name" name ="name" class = "form-control" />
+  </div>
+  
+  
+  <button class = "float-right">
+    add
+  </button>
+</div>
+  <table class = "table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor = "let hero of heroes">
+      <td scope = "col" class="badge">{{hero.id}}</td>
+      <td scope = "col">
+        <a routerLink="/detail/1">
+          {{hero.name}}
+        </a>
+      </td>
+      <td scope ="col">
+          <button type = "button" class = "delete" title="delete hero"
+          >x</button>
+      </td>
+    </tr>
+  </table>
+</div>
